@@ -9,11 +9,6 @@ export const Shuffled = () => {
     const [finalPassword, setPassword] = useState("")
     const [error, setError] = useState("")
 
-    const randomChar = (array) => {
-       
-    }
-
-
     const generatePassword = () => {
         try {
             let characters = ""
@@ -45,8 +40,6 @@ export const Shuffled = () => {
                 const num = Math.floor(Math.random() * array.length)
                 password += array[num]
             }
-
-            console.log(password)
             setError("")
             return password
         } catch (e) {
@@ -65,21 +58,21 @@ export const Shuffled = () => {
             <div className='flex flex-col w-1/4 my-4 text-white'>
                 <label htmlFor="chars" className=' mb-4'>Choose the type of characters.</label>
                 <div className="flex gap-4 items-center">
-                    <input type="checkbox" onChange={() => setCheckedOne(!checkedOne)} />
+                    <input type="checkbox" className="check-input" onChange={() => setCheckedOne(!checkedOne)} />
                     <label htmlFor="">Downcase letters</label>
                 </div>
 
                 <div className="flex gap-4 items-center">
-                    <input type="checkbox" onChange={() => setCheckedTwo(!checkedTwo)} />
+                    <input type="checkbox" className="check-input" onChange={() => setCheckedTwo(!checkedTwo)} />
                     <label htmlFor="">Uppercase letters</label>
                 </div>
                 <div className="flex gap-4 items-center">
-                    <input type="checkbox" onChange={() => setCheckedThree(!checkedThree)} />
+                    <input type="checkbox" className="check-input" onChange={() => setCheckedThree(!checkedThree)} />
                     <label htmlFor="">Special characters</label>
                 </div>
 
                 <div className="flex gap-4 items-center">
-                    <input type="checkbox" onChange={() => setCheckedFour(!checkedFour)} />
+                    <input type="checkbox" className="check-input" onChange={() => setCheckedFour(!checkedFour)} />
                     <label htmlFor="">Numbers</label>
                 </div>
             </div>

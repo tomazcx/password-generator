@@ -25,3 +25,7 @@ button {
 button:hover {
     @apply bg-transparent;
 }
+
+.check-input{
+@apply bg-transparent rounded checked:bg-transparent checked:border-gray-400 focus:bg-transparent;
+}
