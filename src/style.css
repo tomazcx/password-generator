@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    @apply text-gray-200
 }
 
 body {
@@ -14,17 +15,6 @@ body {
     width: 100%;
 }
 
-input {
-    @apply py-1 px-2 rounded
-}
-
-button {
-    @apply mt-8 bg-sky-600 px-8 py-1.5 rounded-xl border-2 border-sky-600 text-gray-900;
-}
-
-button:hover {
-    @apply bg-transparent;
-}
 
 .check-input{
 @apply bg-transparent rounded checked:bg-transparent checked:border-gray-400 focus:bg-transparent;

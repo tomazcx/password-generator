@@ -1,6 +1,8 @@
 import { useState } from "react"
+import {useParams} from 'react-router-dom'
 
 export const Shuffled = () => {
+
     const [charNum, setCharNum] = useState(0)
     const [checkedOne, setCheckedOne] = useState(false)
     const [checkedTwo, setCheckedTwo] = useState(false)
@@ -49,13 +51,13 @@ export const Shuffled = () => {
     }
 
     return (
-        <>
-            <div className='flex flex-col w-1/4 mb-4'>
-                <label htmlFor="number" className='text-white mb-4'>Number of characters (minimun of 6)</label>
-                <input type="number" id="number" onChange={(e) => setCharNum(e.target.value)} />
+        <div className="w-full max-w-[320px]">
+            <div className='flex flex-col mb-4'>
+                <label htmlFor="number" className='mb-4'>Number of characters (minimun of 6)</label>
+                <input type="number" className="text-black p-4 py-2 rounded-md w-full" id="number" onChange={(e) => setCharNum(e.target.value)} />
             </div>
 
-            <div className='flex flex-col w-1/4 my-4 text-white'>
+            <div className='flex flex-col mt-8 mb-4'>
                 <label htmlFor="chars" className=' mb-4'>Choose the type of characters.</label>
                 <div className="flex gap-4 items-center">
                     <input type="checkbox" className="check-input" onChange={() => setCheckedOne(!checkedOne)} />
@@ -76,13 +78,14 @@ export const Shuffled = () => {
                     <label htmlFor="">Numbers</label>
                 </div>
             </div>
-            <button className="mt-4" onClick={() => setPassword(generatePassword())}>Generate</button>
-            <p className='text-red-600 mt-4'>{error}</p>
-
-            <div className='flex flex-col w-1/4 my-4'>
-                <p className="text-center text-xl text-white mt-8 mb-4">Result:</p>
-                <input type="text" id="chars" className="text-center" value={finalPassword} maxLength={charNum} disabled />
+            
+            <div className='flex flex-col mb-3'>
+                <p className="text-center text-xl mt-8 mb-4">Result:</p>
+                <input type="text" id="chars" className="text-black p-4 py-2 rounded-md text-center w-full disabled:bg-gray-400" value={finalPassword} maxLength={charNum} disabled />
             </div>
-        </>
+            <button className=" bg-blue-300 px-8 py-1.5 rounded-xl border-2 border-blue-300 text-gray-900 w-full hover:bg-blue-400 hover:border-blue-400 transition-colors" onClick={() => setPassword(generatePassword())}>Generate</button>
+            <p className='text-center text-red-600 mt-4 mb-32'>{error}</p>
+
+        </div>
     )
 }
