@@ -84,7 +84,8 @@ export const Shuffled = () => {
                 <input type="text" name="password" id="password" className="text-black p-4 py-2 rounded-md text-center w-full disabled:bg-gray-400" value={finalPassword} maxLength={charNum} disabled />
             </div>
             <button className=" bg-blue-300 px-8 py-1.5 rounded-xl border-2 border-blue-300 text-gray-900 w-full hover:bg-blue-400 hover:border-blue-400 transition-colors" onClick={() => setPassword(generatePassword())}>Generate</button>
-            <p className='text-center text-red-600 mt-4 mb-32'>{error}</p>
+            <p className='text-center text-red-600 mt-4 mb-8'>{error}</p>
+            <span className="mb-32 text-center block">Powered by <a href="https://github.com/tomazcx" target={"_blank"} className="border-b">tomazcx</a></span>
 
         </div>
     )

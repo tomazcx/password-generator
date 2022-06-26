@@ -75,8 +75,8 @@ export const Complete = () => {
                     <label htmlFor="password" className="text-center text-xl mb-2">Result:</label>
                     <input type="text" name="password" id="password" className="text-black p-4 py-2 rounded-md text-center w-full disabled:bg-gray-400" value={password} disabled />
                 </div>
-                <button className=" bg-blue-300 px-8 py-1.5 rounded-xl border-2 border-blue-300 text-gray-900 w-full hover:bg-blue-400 hover:border-blue-400 transition-colors disabled:border-blue-100 disabled:bg-blue-100 mb-32 " disabled={wordsArray.length < 1} onClick={() => setPassword(generatePassword())}>Generate</button>
-
+                <button className=" bg-blue-300 px-8 py-1.5 rounded-xl border-2 border-blue-300 text-gray-900 w-full hover:bg-blue-400 hover:border-blue-400 transition-colors disabled:border-blue-100 disabled:bg-blue-100 mb-8 " disabled={wordsArray.length < 1} onClick={() => setPassword(generatePassword())}>Generate</button>
+                <span className="mb-32 text-center block">Powered by <a href="https://github.com/tomazcx" target={"_blank"} className="border-b">tomazcx</a></span>
             </div>
         </div>
     )
