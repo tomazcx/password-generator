@@ -17,7 +17,7 @@ export const Header = () =>{
                 <Link to={'/shuffled'} onClick={() => setSelected(1)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300 p-3 rounded cursor-pointer ',{
                     'bg-blue-300 text-black': selectedShuffled === 1,
                     'bg-transparent text-blue-300 hover:text-black': selectedShuffled !== 1
-                })}>Shuffled Words</Link>
+                })}>Shuffled Characters</Link>
                 <Link to={'/complete'} onClick={() => setSelected(2)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300   p-3 rounded cursor-pointer',{
                     'bg-blue-300 text-black': selectedShuffled === 2,
                     'bg-transparent text-blue-300 hover:text-black': selectedShuffled !== 2
