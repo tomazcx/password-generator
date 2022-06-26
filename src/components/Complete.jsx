@@ -43,8 +43,8 @@ export const Complete = () => {
             <div className='flex flex-col mt-8'>
                
                 <label htmlFor="word" className='mb-4'>Insert words to shuffle</label>
-                <div className="flex items-center">
-                    <input type="text" className="text-black flex-1 p-4 py-2 rounded-l-lg disabled:bg-gray-400" id="word" onChange={(e) => setWordInput(e.target.value)} />
+                <div className="flex items-center w-full">
+                    <input type="text" className=" text-black flex-1 p-4 py-2 rounded-l-lg disabled:bg-gray-400" id="word" onChange={(e) => setWordInput(e.target.value)} />
                     <button onClick={() => addWord(wordInput)} className="bg-blue-300 text-black border border-blue-300 hover:border-blue-400 hover:bg-blue-400 transition-colors p-4 py-2 rounded-r-lg disabled:bg-gray-600 disabled:border-gray-600">Add</button>
                 </div>
 
