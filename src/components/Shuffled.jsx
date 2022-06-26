@@ -80,7 +80,7 @@ export const Shuffled = () => {
             </div>
             
             <div className='flex flex-col mb-3'>
-                <label htmlFor="password" className="text-center text-xl mt-8 mb-3">Result:</label>
+                <label htmlFor="password" className="text-center text-xl mt-8 mb-2">Result:</label>
                 <input type="text" name="password" id="password" className="text-black p-4 py-2 rounded-md text-center w-full disabled:bg-gray-400" value={finalPassword} maxLength={charNum} disabled />
             </div>
             <button className=" bg-blue-300 px-8 py-1.5 rounded-xl border-2 border-blue-300 text-gray-900 w-full hover:bg-blue-400 hover:border-blue-400 transition-colors" onClick={() => setPassword(generatePassword())}>Generate</button>
