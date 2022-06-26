@@ -14,13 +14,13 @@ export const Header = () =>{
 
             <p className='mb-5 text-center'>Create a random password based on the options chosen by yourself.</p>
             <nav className='flex gap-8 text-white mb-8'>
-                <Link to={'/shuffled'} onClick={() => setSelected(1)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300  text-blue-300 p-3 rounded cursor-pointer',{
+                <Link to={'/shuffled'} onClick={() => setSelected(1)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300 p-3 rounded cursor-pointer',{
                     'bg-blue-300 text-black': selectedShuffled === 1,
-                    'bg-transparent': selectedShuffled !== 1
+                    'bg-transparent text-blue-300': selectedShuffled !== 1
                 })}>Shuffled Words</Link>
-                <Link to={'/complete'} onClick={() => setSelected(2)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300  text-blue-300 p-3 rounded cursor-pointer',{
+                <Link to={'/complete'} onClick={() => setSelected(2)} className={classNames('hover:bg-blue-400 hover:border-blue-400 transition-colors border border-blue-300   p-3 rounded cursor-pointer',{
                     'bg-blue-300 text-black': selectedShuffled === 2,
-                    'bg-transparent hover:text-black': selectedShuffled !== 2
+                    'bg-transparent text-blue-300 hover:text-black': selectedShuffled !== 2
                 })}>Complete Words</Link>
             </nav>
         </header>
