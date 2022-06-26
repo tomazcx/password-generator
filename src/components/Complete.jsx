@@ -44,7 +44,7 @@ export const Complete = () => {
     return (
         <div className="w-full max-w-[320px]">
 
-            <div className='flex flex-col mt-8'>
+            <div className='flex flex-col'>
 
                 <label htmlFor="word" className='mb-4'>Insert words to shuffle</label>
                 <input type="text" className=" text-black p-4 py-2 rounded-md disabled:bg-gray-400" id="word" onChange={(e) => setWordInput(e.target.value)} />
